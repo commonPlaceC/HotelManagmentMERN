@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "server": "nodemon index.js",
+    "server": "start index.js",
+    "server:dev": "nodemon index.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server:dev\" \"npm run client\""
   },
   "keywords": [],
   "author": "",

@@ -1,14 +1,19 @@
-const express = require("express");
-const mongoose = require("mongoose");
+import express from "express";
+import { connect } from "mongoose";
+
+import UserModel from "./server/models/User.js";
 
 const PORT = 5000;
-const URL = "mongodb+srv://admin:pass@cluster0.bt3vkwf.mongodb.net/";
+const URL = "mongodb+srv://admin:pass@cluster0.bt3vkwf.mongodb.net/hotel?authSource=admin&compressors=zlib&retryWrites=true&w=majority&ssl=true";
 const app = express();
+
+app.use(express.json());
+
 
 async function start() {
   try {
-    await mongoose.connect(URL, {}).then(result => console.log("database connected"));
-
+    await connect(URL);
+    console.log("MonogoDB connected");
     app.listen(PORT, (err) => {
       err ? console.log(err) : console.log(`Listening port ${PORT}`);
     });
@@ -16,3 +21,10 @@ async function start() {
 }
 
 start()
+
+const doc = new UserModel({
+  email: "test1@mail.ru",
+  passwordHash: "1234",
+  role: "Guest",
+});
+

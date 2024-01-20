@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 2% 15px 2%;
+    background-color: $background-main-dark;
+    border-bottom: 1px solid $border-light-grey;
+    
+    img {
+        height: 10vmin;
+    }
+
+    &__list {
+        flex: 1;
+        text-align: left;
+
+        li {
+            color: $unfocused-text;
+            display: inline-block;
+            margin: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+
+    &__account {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $unfocused-text;
+        
+        span {
+            margin-right: 10px;
+        }
+    }
+}
