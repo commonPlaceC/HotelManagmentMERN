@@ -1,0 +1,27 @@
+.card {
+    background-color: $background-main-dark;
+    margin: 10px;
+    border: 0px;
+    padding: 10px;
+    border-radius: 50px;
+    background: inherit;
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.10) inset, -5px -10px 10px 0px rgba(163, 47, 163, 0.10) inset;
+    
+    .table {
+        th {
+            font-family: 'Nunito SemiBold', serif;
+            font-size: 1.5rem;
+            text-align: center;
+            justify-content: center;
+            color: $unfocused-text;
+        }
+
+        td {
+            font-family: 'Nunito SemiBold', serif;
+            font-size: 1.5em;
+            text-align: center;
+            justify-content: center;
+            color: $border-light-grey;
+        }
+    }
+}

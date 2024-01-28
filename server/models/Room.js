@@ -8,9 +8,8 @@ const RoomSchema = new Schema({
     },
     description: {
         type: String,
-        required: true,
+        required: false,
     },
-    imageURL: String,
     
 }, {
     timestamps: true,

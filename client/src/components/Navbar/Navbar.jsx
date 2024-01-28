@@ -1,28 +1,44 @@
-import React from 'react';
+import { React, useState } from "react";
 
-import accLogo from '../../assets/img/Logo.png';
+import Button from "../Button/Button";
+import accLogo from "../../assets/img/Logo.png";
+import accArrow from "../../assets/img/svg/acc-arrow.svg";
 
 const Navbar = () => {
+    const navbarItems = [
+        "Dashboard",
+        "Reservations",
+        "Rooms",
+        "Users",
+        "Services",
+    ];
+
+    const [time, setTime] = useState(new Date());
+    setInterval(() => setTime(new Date()), 1000);
+
     return (
-        <div className='navbar'>
-            <img src="" alt="" className='navbar__logo'/>
+        <div className="navbar">
+            <img src="" alt="" className="navbar__logo" />
 
-            <span style={{color:"red"}}>Time now: {new Date().toLocaleTimeString()} </span>
+            <span style={{ color: "white" }}>
+                Time now: {time.toLocaleTimeString()}{" "}
+            </span>
 
-            <ul className='navbar__list'>
-                <li>Dashboard</li>
-                <li>Reservations</li>
-                <li>Rooms</li>
-                <li>Users</li>
-                <li>Services</li>
+            <ul className="navbar__list">
+                {navbarItems.map((item) => (
+                    <Button className="tab-button">{item}</Button>
+                ))}
             </ul>
 
-            <div className='navbar__account'>
-                <span>User_name</span>
-                <img src={accLogo} id='navbarAvatar'/>
+            <div className="navbar__account">
+                <span>manager@example.com</span>
+                <img src={accLogo} />
+                {/* <svg fill='$white' height='30px' width='30px'>
+                    <use xlinkHref={accArrow}/>
+                </svg> */}
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Navbar;

@@ -6,13 +6,18 @@ const UserSchema = new Schema({
         required: true,
         unique: true,
     },
+    name: {
+        type: String,
+        required: true
+    },
     passwordHash: {
         type: String,
         required: true,
     },
     role: {
         type: String,
-        required: true,
+        enum: ["GUEST", "EMPLOYEE"],
+        defaul: "GUEST",
     }
 }, {
     timestamps: true,

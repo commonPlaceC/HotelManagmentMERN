@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "date": "1.02.2023",
+        "guest": "Someone F.D.",
+        "room": 101,
+        "status": "active",
+        "outdate": "2012-04-23T18:25:43.511Z"
+    },
+
+    {
+        "id": 1,
+        "date": "2.02.2023",
+        "guest": "Somebody G.F.",
+        "room": 102,
+        "status": "paused",
+        "outdate": "2013-04-23T18:25:43.511Z"
+    }
+]

@@ -1,0 +1,25 @@
+.tab-button {
+    border: 0px;
+    background-color: inherit;
+    color: $unfocused-text;
+    display: inline-block;
+    margin: 10px 20px;
+    font-family: 'Nunito Medium', serif;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.update-button {
+    border: 0px;
+    background-color: inherit;
+    color: $accent-purple;
+    font-size: 2em;
+    font-family: 'Nunitu Medium';
+    text-decoration: underline;
+    transition: ease-in-out 100ms;
+
+    &:hover {
+        color: #cd3bcd;
+        text-shadow: 0px 0px 10px $accent-purple;
+    }
+}
